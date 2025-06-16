@@ -1,0 +1,15 @@
+{
+  "name": "simple-webserver",
+  "version": "0.0.1",
+  "description": "Simple web server running on iExec",
+  "main": "src/app.js",
+  "type": "module",
+  "dependencies": {
+    "@ngrok/ngrok": "^1.5.1",
+    "child_process": "^1.0.2",
+    "express": "^5.1.0",
+    "figlet": "^1.8.1",
+    "nodemailer": "^7.0.3",
+    "util": "^0.12.5"
+  }
+}
