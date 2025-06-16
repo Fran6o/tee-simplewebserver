@@ -1,14 +1,21 @@
 # simple-webserver
 
-EXPERIMENTAL!! 
-Running a web server with Express and exposing the service local port over the internet using ngrok (https://ngrok.com)
+### ⚠️ EXPERIMENTAL!! 
 
-Dev secret must be passed as a JSON string in IEXEC_APP_DEVELOPER_SECRET
-{
-"gmailUser":<Your gmail user>, 
-"gmailPwd":<Your gmail pwd>, 
-}
+This iApp runs a web server with Nodejs and Express and it exposes the service local port over the internet using ngrok (https://ngrok.com)
 
-Request secrets must be passed as string in 
-  IEXEC_REQUESTER_SECRET_1 ngrokAuthToken 
-  IEXEC_REQUESTER_SECRET_2 notifyToEmail
+This simple-webserver serves a REST API with 1 endpoint  `/hello?name=<your name>` and returns a hello message that looks like this:
+
+HELLO vitalik ✅ Running inside a TEE (likely SGX/TDX). Service is up. (uptime: 33s)
+
+### How to use 
+A developer application secret must be passed as a JSON string in `IEXEC_APP_DEVELOPER_SECRET`
+```
+{"gmailUser":<Your gmail user>, "gmailPwd":<Your gmail pwd>}
+```
+
+ngrokAuthToken and notifyToEmail secrets must be passed as string in requester secret 1 and 2 
+```
+IEXEC_REQUESTER_SECRET_1 ngrokAuthToken  ngrok authentication token
+IEXEC_REQUESTER_SECRET_2 notifyToEmail  Email of the person who will receive the web server info including its assigned address
+```
