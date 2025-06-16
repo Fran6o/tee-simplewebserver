@@ -2,7 +2,7 @@
 
 ### ⚠️ EXPERIMENTAL!! 
 
-This iApp runs a web server with Nodejs and Express and it exposes the service local port over the internet using ngrok (https://ngrok.com)
+This iApp (iExec Application) runs a web server built with Nodejs and Express in a TEE . The service local port is exposed over the internet using ngrok (https://ngrok.com)
 
 This simple-webserver serves a REST API with 1 endpoint  `/hello?name=<your name>` and returns a hello message that looks like this:
 
