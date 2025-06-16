@@ -10,6 +10,7 @@ HELLO vitalik ✅ Running inside a TEE (likely SGX/TDX). Service is up. (uptime:
 
 ### How to use 
 A developer application secret must be passed as a JSON string in `IEXEC_APP_DEVELOPER_SECRET`
+These credentials are use to send an notification email once the service is up and running. The email contains the public URL as established by ngrok service.
 ```
 {"gmailUser":<Your gmail user>, "gmailPwd":<Your gmail pwd>}
 ```
